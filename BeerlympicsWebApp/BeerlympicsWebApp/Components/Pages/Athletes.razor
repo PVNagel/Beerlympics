@@ -1,7 +1,46 @@
 ﻿@page "/atleter"
+@using BeerlympicsWebApp.Models
 
 <h1>Atleter</h1>
 
-@code {
+<MudGrid>
+    @foreach (var athlete in athletes)
+    {
+        <MudItem xs="12" sm="6" md="4" lg="3" Class="d-flex">
+            <MudCard Class="ma-3 pa-2 d-flex flex-row" Style="height:250px; flex:1;">
+                <MudCardContent Class="d-flex flex-column justify-center" Style="flex:1;">
+                    <MudText Typo="Typo.h6">@athlete.FullName</MudText>
+                    <MudText Typo="Typo.body2">Land: @athlete.NationalityName</MudText>
+                    <MudText Typo="Typo.body2">By: @athlete.City</MudText>
+                    <MudText Typo="Typo.body2">Alder: @athlete.Age</MudText>
+                    <MudText Typo="Typo.body2">Højde: @athlete.Height cm</MudText>
+                </MudCardContent>
 
+                <MudCardMedia Image="@athlete.ImageUrl"
+                              Style="background-size: cover; background-position: top; width:200px; height:100%;" />
+            </MudCard>
+        </MudItem>
+    }
+</MudGrid>
+
+@code {
+    private List<Athlete> athletes = new List<Athlete>
+    {
+        new Athlete
+        {
+            FullName = "Philip Nagel",
+            NationalityCode = "DK",
+            Birthday = new DateTime(1999, 3, 19),
+            Height = 182,
+            City = "Odense"
+        },
+        new Athlete
+        {
+            FullName = "Jakob Øzden",
+            NationalityCode = "FR",
+            Birthday = new DateTime(1999, 10, 8),
+            Height = 159,
+            City = "Odense"
+        }
+    };
 }
