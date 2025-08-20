@@ -1,0 +1,14 @@
+﻿@page "/resultater/{Year:int}"
+
+<h1>Resultater @Year</h1>
+
+@code {
+    [Parameter]
+    public int Year { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        // Load data dynamically based on Year
+        // Example: LoadResultsForYear(Year);
+    }
+}
