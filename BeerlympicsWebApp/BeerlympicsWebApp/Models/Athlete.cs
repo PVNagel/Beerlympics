@@ -36,8 +36,10 @@ namespace BeerlympicsWebApp.Models
         // Dynamically generate the image URL based on Name
         public string ImageUrl => $"/images/athletes/{ToSafeFileName(FullName)}.png";
 
+        public string Slug => ToSafeFileName(FullName).Replace('_', '-');
+
         // Helper method to generate safe filenames
-        private static string ToSafeFileName(string fullName)
+        public string ToSafeFileName(string fullName)
         {
             // Normalize the string to decompose accented characters (e.g., Ø -> O)
             var normalizedName = fullName.Normalize(NormalizationForm.FormD);

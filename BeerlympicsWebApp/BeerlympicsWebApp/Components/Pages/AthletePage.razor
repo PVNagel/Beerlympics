@@ -1,0 +1,25 @@
+﻿@page "/atleter/{Slug}"
+@inject AthleteService AthleteService
+
+<h3>Athlete: @Athlete?.FullName</h3>
+
+@if (Athlete == null)
+{
+    <p>Loading...</p>
+}
+
+@code {
+    [Parameter]
+    public string Slug { get; set; } = string.Empty;
+
+    private Athlete? Athlete { get; set; }
+
+    protected override void OnInitialized()
+    {
+        // Simulate fetching athlete data based on Slug
+        Athlete = AthleteService.GetAthleteBySlug(Slug);
+    }
+    protected override void OnParametersSet()
+    {
+    }
+}
