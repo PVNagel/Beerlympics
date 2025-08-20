@@ -1,0 +1,131 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="py-8">
+    <!-- Welcome -->
+    <MudPaper Elevation="0" Class="rounded-2xl p-10 mb-8">
+        <MudStack JustifyContent="JustifyContent.Center" AlignItems="AlignItems.Center">
+            <div class="text-center">
+                <MudText Typo="Typo.h3" Align="Align.Center" Class="font-extrabold">
+                    Velkommen til Ølympics
+                </MudText>
+
+                <MudText Typo="Typo.subtitle1" Align="Align.Center" Class="opacity-80">
+                    Den uofficielle (og uforglemmelige) druklege-olympiade
+                </MudText>
+            </div>
+        </MudStack>
+    </MudPaper>
+
+
+    <!-- What is Ølympics? -->
+    <MudGrid Class="mb-8" GutterSize="3">
+        <MudItem xs="12" md="6">
+            <MudCard Class="rounded-2xl h-100">
+                <MudCardContent>
+                    <MudIcon Icon="@Icons.Material.Filled.Info" Size="Size.Large" />
+                    <MudText Typo="Typo.h6" Class="mt-2 font-bold">Hvad er Ølympics?</MudText>
+                    <MudText Typo="Typo.body2">
+                        Ølympics er en hyggelig og konkurrencedygtig turnering i diverse sport og druklege.
+                        Deltagerne dyster i flere discipliner, og jager point til den samlede medaljetabel.
+                        Fokus er på sjov, fællesskab og god stil – og for nogen om at drikke mest.
+                    </MudText>
+                    <MudText Typo="Typo.body2" Class="opacity-80">
+                        Alle discipliner kan spilles dopet (alkoholfrit. Fair play, sikkerhed og samtykke er i centrum.
+                    </MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+        <MudItem xs="12" md="4">
+            <MudCard Class="rounded-2xl h-100">
+                <MudCardContent>
+                    <MudText Typo="Typo.h6" Class="mb-3 font-bold"><MudIcon Icon="@Icons.Material.Filled.Event" Class="mr-2" />Næste event: 05/09/2025 </MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+
+    <!-- How it works -->
+    <MudGrid Class="mb-8" GutterSize="3">
+        <MudItem xs="12" md="4">
+            <MudCard Class="rounded-2xl h-100">
+                <MudCardContent>
+                    <MudIcon Icon="@Icons.Material.Filled.EmojiEvents" Size="Size.Large" />
+                    <MudText Typo="Typo.h6" Class="mt-2 font-bold"> Dyst i discipliner</MudText>
+                    <MudText Typo="Typo.body2">Beer Pong, Flip Cup, Stafet og sjove specialrunder. Point gives pr. disciplin.</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+        <MudItem xs="12" md="4">
+            <MudCard Class="rounded-2xl h-100">
+                <MudCardContent>
+                    <MudIcon Icon="@Icons.Material.Filled.MilitaryTech" Size="Size.Large" />
+                    <MudText Typo="Typo.h6" Class="mt-2 font-bold"> Vind medaljer</MudText>
+                    <MudText Typo="Typo.body2">Top 3 i den samlede stilling får ære, hæder – og måske en pokal.</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+        <MudItem xs="12" md="4">
+            <MudCard Class="rounded-2xl h-100">
+                <MudCardContent>
+                    <MudIcon Icon="@Icons.Material.Filled.SportsBar" Size="Size.Large" />
+                    <MudText Typo="Typo.h6" Class="mt-2 font-bold"> Drik ØL</MudText>
+                    <MudText Typo="Typo.body2">En fantastisk undskyldning for at drikke nogen ØL.</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+
+
+    <!-- Sample disciplines -->
+    <MudText Typo="Typo.h5" Class="mb-3 font-bold"><MudIcon Icon="@Icons.Material.Filled.SportsKabaddi" Class="mr-2" />Eksempler på discipliner</MudText>
+    <MudGrid Class="mb-8" GutterSize="3">
+        <MudItem xs="12" md="3">
+            <MudCard Class="rounded-2xl h-100">
+                <MudImage Src="/images/beerpong.jpg" Height="180" Width="180" Class="mx-auto d-block"/>                
+                <MudCardContent>
+                    <MudText Typo="Typo.subtitle1" Class="font-bold">Beer Pong</MudText>
+                    <MudText Typo="Typo.body2">Klassikeren. Precision og repitition</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+        <MudItem xs="12" md="3">
+            <MudCard Class="rounded-2xl h-100">
+                <MudImage Src="/images/cupflip.jpg" Height="180" Width="180" Class="mx-auto d-block" />
+                <MudCardContent>
+                    <MudText Typo="Typo.subtitle1" Class="font-bold">Cup flip</MudText>
+                    <MudText Typo="Typo.body2">Hurtighed og koordination. Best-of-3 heats.</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+        <MudItem xs="12" md="3">
+            <MudCard Class="rounded-2xl h-100">
+                <MudImage Src="/images/ølbowling.png" Height="180" Width="180" Class="mx-auto d-block" />
+                <MudCardContent>
+                    <MudText Typo="Typo.subtitle1" Class="font-bold">Ølbowling</MudText>
+                    <MudText Typo="Typo.body2">Bowling med en fodbold og øl.</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+        <MudItem xs="12" md="3">
+            <MudCard Class="rounded-2xl h-100">
+                <MudImage Src="/images/speeddruk.png" Height="180" Width="180" Class="mx-auto d-block" />
+                <MudCardContent>
+                    <MudText Typo="Typo.subtitle1" Class="font-bold">Speed Druk</MudText>
+                    <MudText Typo="Typo.body2">Hvor hurtigt kan man bunde en ØL?</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+
+
+    <!-- Fair play / safety -->
+    <MudAlert Severity="Severity.Info" Variant="Variant.Outlined" Class="rounded-2xl mb-8">
+        <MudText Typo="Typo.subtitle2" Class="font-bold">Fair play & sikkerhed først</MudText>
+        <MudText Typo="Typo.body2">
+            Drik ansvarligt, lyt til din krop, og respekter et nej. Alle lege kan spilles med alkoholfri alternativer, og pauser er altid ok.
+            Arrangørerne kan til enhver tid ændre regler eller afbryde en disciplin af hensyn til sikkerheden.
+        </MudText>
+    </MudAlert>
+</MudContainer>
